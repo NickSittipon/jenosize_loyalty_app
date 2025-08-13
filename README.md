@@ -1,0 +1,1 @@
+# jenosize_loyalty_app
