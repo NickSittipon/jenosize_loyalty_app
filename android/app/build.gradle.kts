@@ -1,0 +1,38 @@
+plugins {
+    id("com.android.application")
+    id("kotlin-android")
+    id("dev.flutter.flutter-gradle-plugin") // Flutter plugin ต้องอยู่หลัง Android + Kotlin
+}
+
+android {
+    namespace = "com.example.jenosize_test"
+    compileSdk = 34 // กำหนดเองแทน flutter.compileSdkVersion
+    ndkVersion = "27.0.12077973" // ใช้ NDK ตามที่ firebase_core ต้องการ
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+
+    defaultConfig {
+        applicationId = "com.example.jenosize_test"
+        minSdk = 23 // เพิ่มเป็น 23 แก้ปัญหา firebase_core
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
