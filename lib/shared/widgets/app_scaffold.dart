@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'bottom_nav_bar.dart';
+import 'bottom_navigation/bottom_nav_bar.dart';
 import 'package:jenosize_test/app/routes/app_router.dart';
 
 class AppScaffold extends StatefulWidget {

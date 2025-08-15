@@ -1,13 +1,13 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    id("dev.flutter.flutter-gradle-plugin") // Flutter plugin ต้องอยู่หลัง Android + Kotlin
+    id("dev.flutter.flutter-gradle-plugin")
 }
 
 android {
     namespace = "com.example.jenosize_test"
-    compileSdk = 34 // กำหนดเองแทน flutter.compileSdkVersion
-    ndkVersion = "27.0.12077973" 
+    compileSdk = 35
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -20,8 +20,8 @@ android {
 
     defaultConfig {
         applicationId = "com.example.jenosize_test"
-        minSdk = 23
-        targetSdk = 34
+        minSdk = 23              
+        targetSdk = 35         
         versionCode = 1
         versionName = "1.0"
     }
