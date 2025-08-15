@@ -6,7 +6,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   test-and-merge:
@@ -20,14 +19,29 @@ jobs:
     
     - uses: subosito/flutter-action@v2
       with:
-        channel: 'stable'
+        flutter-version: '3.16.0'
         
     - name: Install dependencies
       run: flutter pub get
       
+    - name: Format check (optional)
+      run: dart format . --set-exit-if-changed
+      
+    - name: Analyze project source
+      run: flutter analyze
+      
     # - name: Run tests
     #   run: flutter test
+    
+    - name: Build APK (release)
+      run: flutter build apk --release
       
+    - name: Upload APK artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-release-apk
+        path: build/app/outputs/flutter-apk/app-release.apk
+        
     - name: Auto merge to main
       run: |
         git config user.name "github-actions[bot]"
