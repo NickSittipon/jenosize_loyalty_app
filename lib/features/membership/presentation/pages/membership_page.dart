@@ -16,7 +16,7 @@ class MembershipPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppScaffold(
       title: "Membership",
-      currentIndex: 1, // index ของ Membership tab
+      currentIndex: 1,
       body: BlocProvider(
         create: (_) => MembershipBloc(
           joinMembership: JoinMembership(MembershipRepositoryImpl()),
