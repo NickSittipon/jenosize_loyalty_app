@@ -1,3 +1,4 @@
+[https://github.com/user-attachments/assets/56f32de5-cc60-4ada-be71-cca9524e6f25](https://github.com/user-attachments/assets/81e3af04-aa3d-4d26-b2bd-460c860aef46)
 
 # Jenosize Loyalty App
 
@@ -100,6 +101,10 @@ lib/
 │           └── pages/
 ├── shared/
 │   └── widgets/
+│       └── bottom_navigation/
+│           └── constants/
+│           └── models/
+│           └── widgets/
 └── main.dart
 </pre>
 
@@ -145,8 +150,6 @@ The project follows **Clean Architecture** with three main layers:
 ## 📋 Prerequisites
 - Flutter SDK (>=3.0.0)
 - Dart SDK (>=3.0.0)
-- Android Studio / VS Code
-- Android SDK / Xcode (for iOS)
 
 ---
 
