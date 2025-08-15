@@ -140,7 +140,6 @@ The project follows **Clean Architecture** with three main layers:
 **UI & UX:**
 - cupertino_icons: ^1.0.8
 - animated_text_kit: ^4.2.3
-- flutter_native_splash: ^2.4.6
 
 **Sharing Features:**
 - share_plus: ^11.1.0
@@ -165,11 +164,6 @@ This project includes automated **Continuous Integration and Continuous Deployme
 - **Code Formatting**: Automated `dart format` validation
 - **Static Analysis**: `flutter analyze` for code quality checks
 - **Dependency Install**: Automatic package installation
-
-### 🏗️ **Build Process**
-- **APK Generation**: Builds release APK for Android
-- **Artifact Storage**: Uploads build artifacts to GitHub Actions
-- **Cache Management**: Cleans build caches for consistent builds
 
 ---
 ## 🚀 Getting Started
