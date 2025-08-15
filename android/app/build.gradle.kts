@@ -7,7 +7,7 @@ plugins {
 android {
     namespace = "com.example.jenosize_test"
     compileSdk = 34 // กำหนดเองแทน flutter.compileSdkVersion
-    ndkVersion = "27.0.12077973" // ใช้ NDK ตามที่ firebase_core ต้องการ
+    ndkVersion = "27.0.12077973" 
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -20,7 +20,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.jenosize_test"
-        minSdk = 23 // เพิ่มเป็น 23 แก้ปัญหา firebase_core
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
